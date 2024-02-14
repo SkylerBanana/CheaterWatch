@@ -1,5 +1,5 @@
 import Link from "next/link";
-export default function BackButton() {
+export default async function BackButton() {
   return (
     <Link
       href="/"
