@@ -1,4 +1,4 @@
-import BackButton from "@/components/BackButton";
+import BackButton from "@/app/components/BackButton";
 export default function MyList() {
   return (
     <div>

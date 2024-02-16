@@ -1,5 +1,5 @@
-import Nav from "@/components/Nav";
-import Form from "@/components/Form";
+import Nav from "@/app/components/Nav";
+import Form from "@/app/components/Form";
 
 export default async function Index() {
   return (
