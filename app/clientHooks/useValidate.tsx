@@ -6,7 +6,9 @@ export default async function (formData: FormData) {
     return await getSteamIDFromURL(steamidURL.slice(30).replace(/\//g, ""));
   } else if (steamidURL.startsWith("https://steamcommunity.com/profiles/")) {
     const steamid = steamidURL.replace(/\D/g, "");
+    console.log(steamid);
     return steamid;
+  } else {
+    return "Error";
   }
-  return;
 }

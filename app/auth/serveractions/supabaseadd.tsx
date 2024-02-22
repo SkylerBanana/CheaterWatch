@@ -1,7 +1,7 @@
 "use server";
 import { createClient } from "@/utils/supabase/server";
 
-export default async function supabaseadd(playerstatus: object) {
+export default async function supabaseadd(PlayerStatus: object) {
   const supabase = createClient();
 
   try {
@@ -10,10 +10,10 @@ export default async function supabaseadd(playerstatus: object) {
     } = await supabase.auth.getUser();
 
     const { data, error } = await supabase.from("accounts").insert({
-      steamId: playerstatus.steamId,
-      VACBanned: playerstatus.VACBanned,
-      NumberOfGameBans: playerstatus.NumberOfGameBans,
-      DaysSinceLastBan: playerstatus.DaysSinceLastBan,
+      steamId: PlayerStatus.steamId,
+      VACBanned: PlayerStatus.VACBanned,
+      NumberOfGameBans: PlayerStatus.NumberOfGameBans,
+      DaysSinceLastBan: PlayerStatus.DaysSinceLastBan,
     });
 
     if (error) {
